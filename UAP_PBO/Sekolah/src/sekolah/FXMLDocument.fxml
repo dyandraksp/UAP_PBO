@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="1200.0" style="-fx-background-color: #FFF47D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sekolah.FXMLDocumentController">
+    <children>
+      <Pane layoutX="-1.0" prefHeight="520.0" prefWidth="296.0" style="-fx-background-color: #C2F784;">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="109.0" layoutX="101.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGO_BPI.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutX="117.0" layoutY="170.0" prefHeight="224.0" prefWidth="163.0" spacing="7.0">
+         <children>
+            <TextField fx:id="tfnik" />
+            <TextField fx:id="tfnama" />
+            <TextField fx:id="tfjenis" />
+            <TextField fx:id="tfjabatan" />
+            <TextField fx:id="tfstatus" />
+            <TextField fx:id="tftlp" />
+            <TextField fx:id="tfalamat" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvsekolah" layoutX="313.0" layoutY="151.0" onMouseClicked="#handleMouseAction" prefHeight="318.0" prefWidth="878.0">
+        <columns>
+          <TableColumn fx:id="colnik" prefWidth="84.0" text="NIK" />
+          <TableColumn fx:id="colnama" prefWidth="136.0" text="Nama Pegawai" />
+            <TableColumn fx:id="coljenis_kelamin" prefWidth="89.0" text="Jenis Kelamin" />
+            <TableColumn fx:id="coljabatan" prefWidth="141.0" text=" Jabatan Disekolah" />
+            <TableColumn fx:id="colstatus" prefWidth="76.0" text="Status" />
+            <TableColumn fx:id="colno_telp" prefWidth="147.0" text="No Handphone" />
+            <TableColumn fx:id="colalamat" prefWidth="247.0" text="Alamat" />
+        </columns>
+      </TableView>
+      <Button fx:id="bttambah" layoutX="23.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #DBE1F4;" text="Tambah" />
+      <Button fx:id="btupdate" layoutX="214.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" style="-fx-background-color: #DBE1F4;" text="Update" />
+      <Button fx:id="bthapus" layoutX="120.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #F58C89;" text="Hapus" />
+      <VBox layoutX="21.0" layoutY="178.0" prefHeight="241.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <Label text="NIK" />
+            <Label text="Nama Pegawai" />
+            <Label text="Jenis Kelamin" />
+            <Label text="Jabatan " />
+            <Label text="Status" />
+            <Label text="No Handphone" />
+            <Label text="Alamat" />
+         </children>
+      </VBox>
+      <Label layoutX="313.0" layoutY="89.0" text="Data Staff Sekolah ">
+         <font>
+            <Font name="Century" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="44.0" text="SMK BPI Bandung">
+         <font>
+            <Font name="Leelawadee Bold" size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
